@@ -1,0 +1,9 @@
+D:\inetpub\wwwroot\DNN8\bin\VF_POS_RequestForm.dll
+D:\inetpub\wwwroot\DNN8\bin\VF_POS_RequestForm.pdb
+D:\inetpub\wwwroot\DNN8\DesktopModules\VF_POS_RequestForm\obj\Release\VF_POS_RequestForm.csprojResolveAssemblyReference.cache
+D:\inetpub\wwwroot\DNN8\DesktopModules\VF_POS_RequestForm\obj\Release\VF_POS_RequestForm.dll
+D:\inetpub\wwwroot\DNN8\DesktopModules\VF_POS_RequestForm\obj\Release\VF_POS_RequestForm.pdb
+D:\Projects\ANB\Vendor Source Code\DesktopModulesGit\bin\VF_POS_RequestForm.dll
+D:\Projects\ANB\Vendor Source Code\DesktopModulesGit\bin\VF_POS_RequestForm.pdb
+D:\Projects\ANB\Vendor Source Code\DesktopModulesGit\anb-dnn-modules\VF_POS_RequestForm\obj\Release\VF_POS_RequestForm.dll
+D:\Projects\ANB\Vendor Source Code\DesktopModulesGit\anb-dnn-modules\VF_POS_RequestForm\obj\Release\VF_POS_RequestForm.pdb

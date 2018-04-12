@@ -1,0 +1,9 @@
+D:\inetpub\wwwroot\DNN8\bin\VF_POS_RequestForm.dll
+D:\inetpub\wwwroot\DNN8\bin\VF_POS_RequestForm.pdb
+D:\inetpub\wwwroot\DNN8\DesktopModules\VF_POS_RequestForm\obj\Debug\VF_POS_RequestForm.dll
+D:\inetpub\wwwroot\DNN8\DesktopModules\VF_POS_RequestForm\obj\Debug\VF_POS_RequestForm.pdb
+G:\SonarTest\VF_POS_RequestForm\obj\Debug\VF_POS_RequestForm.csprojResolveAssemblyReference.cache
+G:\SonarTest\VF_POS_RequestForm\obj\Debug\VF_POS_RequestForm.dll
+G:\SonarTest\VF_POS_RequestForm\obj\Debug\VF_POS_RequestForm.pdb
+G:\bin\VF_POS_RequestForm.dll
+G:\bin\VF_POS_RequestForm.pdb

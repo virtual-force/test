@@ -1,0 +1,23 @@
+﻿<h3>VF_POS_RequestForm</h3>
+<p class="Contributor">
+	virtualforce.io <br />
+	<a href="mailto:javed.zahoor@virtualforce.io">javed.zahoor@virtualforce.io</a><br />
+	<a href=http://www.virtualforce.io/>http://www.virtualforce.io/</a><br />
+</p>
+<hr/>
+<div class="License">
+	<h3>About the VF_POS_RequestForm</h3>
+	<p class="Owner">
+		<b>Version CHANGEME</b><br /><br />
+	</p>
+	<p>Description.</p>
+	
+	<h4>Bug Fixes</h4>
+	<ul>
+			<li>Arabic Name validator</li>
+			<li>Number of POS validator</li>
+			<li>Email address validator</li>			
+			<li>submission handler and error reporting on the UI</li>
+	</ul>
+	
+</div>

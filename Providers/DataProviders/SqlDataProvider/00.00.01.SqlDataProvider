@@ -1,0 +1,82 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+IF EXISTS (SELECT * FROM sys.objects WHERE [object_id] = OBJECT_ID(N'{databaseOwner}[{objectQualifier}VF_POS_RequestForm_Items]') AND type in (N'U'))
+	DROP TABLE {databaseOwner}[{objectQualifier}VF_POS_RequestForm_Items]
+GO
+
+CREATE TABLE {databaseOwner}{objectQualifier}VF_POS_RequestForm_Items
+(
+	[ItemId] INT NOT NULL IDENTITY (1, 1),
+	[Name] NVARCHAR(MAX) NOT NULL,
+	[NumPOS] INT NOT NULL,
+	[ContactName] NVARCHAR(MAX) NOT NULL,
+	[MobileNumber] NVARCHAR(MAX) NOT NULL,
+	[Email] NVARCHAR(MAX) NOT NULL,
+	[PrefferedLanguage] NVARCHAR(6) NOT NULL,
+	[ModuleId] INT NOT NULL,
+	[CreatedOnDate] DATETIME NOT NULL,
+	[CreatedByUserId] INT NOT NULL,
+	[LastModifiedOnDate] DATETIME NOT NULL,
+	[LastModifiedByUserId] INT NOT NULL
+)
+GO
+
+
+ALTER TABLE {databaseOwner}[{objectQualifier}VF_POS_RequestForm_Items] ADD CONSTRAINT [PK_{objectQualifier}VF_POS_RequestForm_Items] PRIMARY KEY CLUSTERED ([ItemId])
+GO
+
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/
+/****** Object:  StoredProcedure [dbo].[VF_GetPOSRequests]    Script Date: 05/25/2017 10:56:16 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[VF_GetPOSRequests]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[VF_GetPOSRequests]
+GO
+
+
+/****** Object:  StoredProcedure [dbo].[VF_GetPOSRequests]    Script Date: 05/25/2017 10:56:16 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Author:		JZ, UA
+-- Create date: 20170524
+-- Description:	returns the descending list of orders matching the inputs - top of the list being the most recent one.
+-- =============================================
+CREATE PROCEDURE [dbo].[VF_GetPOSRequests] -- exec vf_getPOSrequests @moduleid = 430, @Name='vf', @MobileNumber='+923214625747', @Email = 'umer.asif@virtualforce.io'
+	-- Add the parameters for the stored procedure here
+			@moduleId as int,
+            @Name as nvarchar(max) = null,
+            @MobileNumber as nvarchar(max) = null,
+            @Email as nvarchar(max) = null
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+	if @Name is null
+	set @Name = '%'
+	if @Email is null
+	set @Email = '%'
+	if @MobileNumber is null
+	set @MobileNumber = '%'
+	
+	select *  from VF_POS_RequestForm_Items Where name like @name and mobileNumber like @MobileNumber and email like @email and moduleid = @moduleid order by itemid desc
+    -- Insert statements for procedure here
+	
+END
+
+GO
+
